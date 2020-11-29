@@ -8,15 +8,16 @@
 		<style>
 			@charset "utf-8";
 			@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-			html {
-				scroll-behavior: smooth;
-			}
 			#backgroundVideo {
 				position: fixed;
 				right: 0;
 				bottom: 0;
 				min-width: 100%;
 				min-height: 100%;
+			}
+			html {
+				scroll-behavior: smooth;
+				background-color: cornflowerblue;
 			}
 			.content {
 				position: relative;
@@ -42,6 +43,10 @@
 				text-align: center;
 				position: relative;
 				margin: -0.25em;
+			}
+			h3 {
+				text-align: center;
+				position: relative;
 			}
 			p {
 				overflow-wrap: break-word;
@@ -69,7 +74,9 @@
 				float: right;
 				position: relative;
 				top: 0.25em;
-				left: 0.25em;
+				left: 0.5em;
+				font-size: 0.75em;
+				color: #6d5d34;
 			}
 			.boxContents {
 				overflow-wrap: break-word;
@@ -87,7 +94,7 @@
 			.visible {
 				display: block;
 			}
-			img {
+			.column > img {
 				display: block;
 				width: 80%;
 				margin: auto;
@@ -98,7 +105,7 @@
 			}
 			.column {
 				float: left;
-				width: 50%;
+				width: 100%;
 				margin-bottom: -0.5em;
 			}
 			.row:after {
@@ -106,9 +113,33 @@
 				display: table;
 				clear: both;
 			}
-@media screen and (max-width: 1200px) {
-				.column {
-				width: 100%;
+			.card {
+				background-color: dimgray;
+				margin-top: 1em;
+				padding-top: 1em;
+				padding-bottom: 1em;
+			}
+			h5 {
+				background-color:slategray;
+				position: relative;
+				text-align: center;
+				width: 90%;
+				margin: auto;
+				font-size: 1.25em;
+			}
+			.card > img {
+				width: 90%;
+				display: block;
+				margin: auto;
+				height: auto;
+			}
+			@media screen and (min-width: 1200px) {
+			.column {
+				width: 50%;
+			}
+			.card {
+				width: 25%;
+				float: right;
 			}
 		}
 		</style>
@@ -134,12 +165,12 @@
 			<p>Aliquam ut massa nec urna ultrices ornare. Morbi gravida sed lectus id aliquam. Morbi porta metus quis nulla malesuada tristique. Proin lobortis fermentum lorem, vitae semper ante placerat eget. Nam lorem enim, faucibus et magna sed, sodales lobortis ante. Integer quis auctor mauris. In eget venenatis turpis. Nulla suscipit elit eu aliquet varius.</p>
 			<div class="row">
 				<div class="column">
-					<img src="https://i.redd.it/06s1oalqk6011.png">
+					<img alt="Filler Image for Testing Purposes" src="https://i.redd.it/06s1oalqk6011.png">
 				</div>
 				<div class="column">
 					<div class="detailBox" onclick="toggleContent(this)">
 						<span class="boxNum">
-					1
+							(Click to expand)
 						</span>
 						<h3> Lorem Ipsum</h3>
 						<div class="boxSummary">
@@ -151,7 +182,7 @@
 					</div>
 					<div class="detailBox" onclick="toggleContent(this)">
 						<span class="boxNum">
-					2
+							(Click to expand)
 						</span>
 						<h3> Lorem Ipsum</h3>
 						<div class="boxSummary">
@@ -163,7 +194,7 @@
 					</div>
 					<div class="detailBox" onclick="toggleContent(this)">
 						<span class="boxNum">
-					3
+							(Click to expand)
 						</span>
 						<h3> Lorem Ipsum</h3>
 						<div class="boxSummary">
@@ -175,7 +206,7 @@
 					</div>
 					<div class="detailBox" onclick="toggleContent(this)">
 						<span class="boxNum">
-					4
+							(Click to expand)
 						</span>
 						<h3> Lorem Ipsum</h3>
 						<div class="boxSummary">
@@ -187,7 +218,7 @@
 					</div>
 					<div class="detailBox" onclick="toggleContent(this)">
 						<span class="boxNum">
-					5
+							(Click to expand)
 						</span>
 						<h3> Lorem Ipsum</h3>
 						<div class="boxSummary">
@@ -236,7 +267,8 @@
 						<p class="boxContents">
 							Etiam rutrum diam eu scelerisque aliquet. Etiam efficitur ligula ac massa tincidunt fringilla. Aenean ac vulputate felis. Nam ullamcorper ultricies risus vitae maximus. Donec id elementum neque, quis pulvinar lorem. Sed iaculis vel turpis nec convallis.
 						</p>
-					</div><div class="detailBox" onclick="toggleContent(this)">
+					</div>
+					<div class="detailBox" onclick="toggleContent(this)">
 						<h3> Lorem Ipsum</h3>
 						<div class="boxSummary">
 					dolor sit amet, consectetur adipiscing elit.
@@ -248,9 +280,83 @@
 				</div>
 			</div>
 			<p>Aliquam ut massa nec urna ultrices ornare. Morbi gravida sed lectus id aliquam. Morbi porta metus quis nulla malesuada tristique. Proin lobortis fermentum lorem, vitae semper ante placerat eget. Nam lorem enim, faucibus et magna sed, sodales lobortis ante. Integer quis auctor mauris. In eget venenatis turpis. Nulla suscipit elit eu aliquet varius.</p>
+			<div class="row">
+				<div class="column">
+					<div class="detailBox" onclick="toggleContent(this)">
+						<h3>Lorem Ipsum</h3>
+						<div class="boxSummary">
+							dolor sit amet, consectetur adipiscing elit.
+						</div>
+						<p class="boxContents">
+							Etiam rutrum diam eu scelerisque aliquet. Etiam efficitur ligula ac massa tincidunt fringilla. Aenean ac vulputate felis. Nam ullamcorper ultricies risus vitae maximus. Donec id elementum neque, quis pulvinar lorem. Sed iaculis vel turpis nec convallis.
+						</p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="detailBox" onclick="toggleContent(this)">
+						<h3>Lorem Ipsum</h3>
+						<div class="boxSummary">
+							dolor sit amet, consectetur adipiscing elit.
+						</div>
+						<p class="boxContents">
+							Etiam rutrum diam eu scelerisque aliquet. Etiam efficitur ligula ac massa tincidunt fringilla. Aenean ac vulputate felis. Nam ullamcorper ultricies risus vitae maximus. Donec id elementum neque, quis pulvinar lorem. Sed iaculis vel turpis nec convallis.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="detailBox" style="margin-bottom: 0.5em;" onclick="toggleContent(this)">
+				<h3>Lorem Ipsum</h3>
+				<div class="boxSummary">
+					dolor sit amet, consectetur adipiscing elit.
+				</div>
+				<p class="boxContents">
+					Mauris sapien massa, sagittis ut nulla sit amet, interdum bibendum elit. Mauris imperdiet at lectus sed rutrum. Proin metus quam, dignissim id pretium eu, pulvinar id magna. Cras mollis sit amet odio a viverra. Suspendisse ac est a libero volutpat elementum. Etiam iaculis mauris sem, ac euismod diam laoreet eget. Praesent convallis dui pellentesque augue fringilla, eu tincidunt velit fermentum. Aliquam sed commodo leo. Donec feugiat libero sit amet ante luctus, in malesuada lorem bibendum. Nunc ante quam, pellentesque a varius in, eleifend sed quam. Nunc varius, dolor ut commodo bibendum, nibh libero eleifend neque, at auctor libero magna pharetra sem. Mauris turpis lorem, gravida ac euismod hendrerit, pharetra in quam.<br><br>Etiam ullamcorper pretium metus, quis placerat odio ornare id. Cras nisl erat, luctus eget ligula vitae, placerat consectetur enim. Pellentesque placerat mauris consectetur ultrices rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc hendrerit, nunc et placerat egestas, dolor augue molestie odio, eu viverra arcu velit et dolor. In sit amet erat enim. Curabitur sapien nulla, tempor at lorem at, cursus tempor felis. Nullam suscipit suscipit lacinia.</p>
+			</div>
+			<div class="row">
+				<div class="column">
+					<div class="detailBox" onclick="toggleContent(this)">
+						<h3>Lorem Ipsum</h3>
+						<div class="boxSummary">
+							dolor sit amet, consectetur adipiscing elit.
+						</div>
+						<p class="boxContents">
+							Etiam rutrum diam eu scelerisque aliquet. Etiam efficitur ligula ac massa tincidunt fringilla. Aenean ac vulputate felis. Nam ullamcorper ultricies risus vitae maximus. Donec id elementum neque, quis pulvinar lorem. Sed iaculis vel turpis nec convallis.
+						</p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="detailBox" onclick="toggleContent(this)">
+						<h3>Lorem Ipsum</h3>
+						<div class="boxSummary">
+							dolor sit amet, consectetur adipiscing elit.
+						</div>
+						<p class="boxContents">
+							Etiam rutrum diam eu scelerisque aliquet. Etiam efficitur ligula ac massa tincidunt fringilla. Aenean ac vulputate felis. Nam ullamcorper ultricies risus vitae maximus. Donec id elementum neque, quis pulvinar lorem. Sed iaculis vel turpis nec convallis.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="content">
+			<h2>Mortal Template</h2>
+			<div class="card">
+				<div class="cardTitle">
+					<h5>Title</h5>
+				</div>
+				<img alt="Filler Image for Testing Purposes" src="https://i.redd.it/06s1oalqk6011.png">
+			</div>
+			<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia turpis vitae nisl porta consectetur. Maecenas nec nisi in lacus tincidunt iaculis sed non augue. Pellentesque dapibus orci quis sollicitudin feugiat. Praesent dapibus varius neque ac faucibus. Maecenas ultrices elit non scelerisque tempor. Proin hendrerit rhoncus sapien consequat vulputate. Duis mattis justo tempus condimentum cursus. Nulla quis metus vitae orci lacinia laoreet. Morbi nec congue erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse at dolor nec urna tempus molestie. Proin vestibulum urna sed sapien dictum imperdiet ac in enim. Nam consectetur risus malesuada risus consectetur, eget convallis ex gravida. Curabitur varius purus quam, sit amet pharetra quam accumsan id. Aliquam semper tristique dui, vel gravida risus.</p>
+			<h4>Lorem Ipsum</h4>
+			<p>Vivamus eu tellus ante. Sed ante nibh, posuere id magna ac, semper porta nulla. Cras ut massa urna. Sed vulputate laoreet bibendum. Nunc pretium cursus lorem ac eleifend. Aliquam erat volutpat. Cras sagittis orci urna, ut iaculis turpis iaculis id. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi facilisis vel leo non scelerisque.</p>
+			<h4>Lorem Ipsum</h4>
+			<p>Sed facilisis eros orci, vitae sollicitudin ipsum condimentum at. Vestibulum tempus interdum molestie. Quisque lobortis metus dui, non elementum metus fermentum id. Ut finibus nisi mauris, et faucibus neque pellentesque in. Aenean eget orci tempor, pellentesque ipsum vitae, pulvinar tellus. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed lectus a dolor vestibulum rhoncus. Praesent eu suscipit lacus. Nullam hendrerit ligula ut elementum consectetur.</p>
+		</div>
 		</div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 		<script>
+			document.getElementById('vid').play();
 			$("#hidden").keypress(function (e) {
     			if(e.which == 13 && !e.shiftKey) {        
         			console.log(this.value);
@@ -259,8 +365,15 @@
 			});
 			function toggleContent(box) {
 				content = box.getElementsByClassName("boxContents").item(0);
+				num = box.getElementsByClassName("boxNum").item(0);
+				console.log(num);
 				if(window.getSelection().toString() == 0) {
 				content.classList.toggle("visible");
+				}
+				if(num.innerHTML === "(Click to collapse)") {
+					num.innerHTML = "(Click to expand)";
+				} else {
+					num.innerHTML = "(Click to collapse)";
 				}
 			}
 		</script>
