@@ -105,7 +105,7 @@
 			}
 			.column {
 				float: left;
-				width: 100%;
+				width: 50%;
 				margin-bottom: -0.5em;
 			}
 			.row:after {
@@ -118,6 +118,7 @@
 				margin-top: 1em;
 				padding-top: 1em;
 				padding-bottom: 1em;
+				width: 20%
 			}
 			h5 {
 				background-color:slategray;
@@ -133,12 +134,12 @@
 				margin: auto;
 				height: auto;
 			}
-			@media screen and (min-width: 1200px) {
+			@media screen and (max-width: 1200px) {
 			.column {
-				width: 50%;
+				width: 100%;
 			}
 			.card {
-				width: 25%;
+				width: 100%;
 				float: right;
 			}
 		}
