@@ -1,15 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 #backgroundVideo {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
+	display: none;
 }
 html {
 	scroll-behavior: smooth;
 	background-color: cornflowerblue;
+	background-image: url("../media/background.jpeg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }
 .content {
 	position: relative;
@@ -98,6 +99,7 @@ label {
 .column {
 	float: left;
 	margin-bottom: -0.5em;
+	width: 100%;
 }
 .row:after {
 	content: "";
@@ -125,11 +127,21 @@ h5 {
 	height: auto;
 }
 @media screen and (min-width: 1200px) {
-.column {
-	width: 50%;
+	.column {
+		width: 50%;
+	}
+	.card {
+		width: 25%;
+		float: right;
+	}
 }
-.card {
-	width: 25%;
-	float: right;
-}
+@media screen and (min-width: 600px) {
+	#backgroundVideo {
+		display: inline;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+		min-height: 100%;
+	}
 }

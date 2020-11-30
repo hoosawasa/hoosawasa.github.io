@@ -107,6 +107,9 @@
 			<div class="row">
 				<div class="column">
 					<div class="detailBox" onclick="toggleContent(this)">
+						<span class="boxNum">
+							(Click to expand)
+						</span>
 						<h3> Lorem Ipsum</h3>
 						<div class="boxSummary">
 					dolor sit amet, consectetur adipiscing elit.
@@ -115,6 +118,9 @@
 							Etiam rutrum diam eu scelerisque aliquet. Etiam efficitur ligula ac massa tincidunt fringilla. Aenean ac vulputate felis. Nam ullamcorper ultricies risus vitae maximus. Donec id elementum neque, quis pulvinar lorem. Sed iaculis vel turpis nec convallis.
 						</p>
 					</div><div class="detailBox" onclick="toggleContent(this)">
+						<span class="boxNum">
+							(Click to expand)
+						</span>
 						<h3> Lorem Ipsum</h3>
 						<div class="boxSummary">
 					dolor sit amet, consectetur adipiscing elit.
@@ -126,6 +132,9 @@
 				</div>
 				<div class="column">
 					<div class="detailBox" onclick="toggleContent(this)">
+						<span class="boxNum">
+							(Click to expand)
+						</span>
 						<h3> Lorem Ipsum</h3>
 						<div class="boxSummary">
 					dolor sit amet, consectetur adipiscing elit.
@@ -135,6 +144,9 @@
 						</p>
 					</div>
 					<div class="detailBox" onclick="toggleContent(this)">
+						<span class="boxNum">
+							(Click to expand)
+						</span>
 						<h3> Lorem Ipsum</h3>
 						<div class="boxSummary">
 					dolor sit amet, consectetur adipiscing elit.
@@ -149,6 +161,9 @@
 			<div class="row">
 				<div class="column">
 					<div class="detailBox" onclick="toggleContent(this)">
+						<span class="boxNum">
+							(Click to expand)
+						</span>
 						<h3>Lorem Ipsum</h3>
 						<div class="boxSummary">
 							dolor sit amet, consectetur adipiscing elit.
@@ -160,6 +175,9 @@
 				</div>
 				<div class="column">
 					<div class="detailBox" onclick="toggleContent(this)">
+						<span class="boxNum">
+							(Click to expand)
+						</span>
 						<h3>Lorem Ipsum</h3>
 						<div class="boxSummary">
 							dolor sit amet, consectetur adipiscing elit.
@@ -171,6 +189,9 @@
 				</div>
 			</div>
 			<div class="detailBox" style="margin-bottom: 0.5em;" onclick="toggleContent(this)">
+				<span class="boxNum">
+					(Click to expand)
+				</span>
 				<h3>Lorem Ipsum</h3>
 				<div class="boxSummary">
 					dolor sit amet, consectetur adipiscing elit.
@@ -181,6 +202,9 @@
 			<div class="row">
 				<div class="column">
 					<div class="detailBox" onclick="toggleContent(this)">
+						<span class="boxNum">
+							(Click to expand)
+						</span>
 						<h3>Lorem Ipsum</h3>
 						<div class="boxSummary">
 							dolor sit amet, consectetur adipiscing elit.
@@ -192,6 +216,9 @@
 				</div>
 				<div class="column">
 					<div class="detailBox" onclick="toggleContent(this)">
+						<span class="boxNum">
+							(Click to expand)
+						</span>
 						<h3>Lorem Ipsum</h3>
 						<div class="boxSummary">
 							dolor sit amet, consectetur adipiscing elit.
@@ -232,14 +259,15 @@
 			function toggleContent(box) {
 				var content = box.getElementsByClassName("boxContents").item(0);
 				var num = box.getElementsByClassName("boxNum").item(0);
-				if(window.getSelection().toString() === 0) {
-				content.classList.toggle("visible");
+				if(window.getSelection().toString() == 0) {
+					content.classList.toggle("visible");
+					if(num.innerHTML === "(Click to collapse)") {
+						num.innerHTML = "(Click to expand)";
+					} else {
+						num.innerHTML = "(Click to collapse)";
+					}
 				}
-				if(num.innerHTML === "(Click to collapse)") {
-					num.innerHTML = "(Click to expand)";
-				} else {
-					num.innerHTML = "(Click to collapse)";
-				}
+				
 			}
 		</script>
 	</body>
