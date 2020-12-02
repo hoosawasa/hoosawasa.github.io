@@ -13,10 +13,12 @@
 			.container {
 				width: 70%;
 				background: white;
-				margin: auto
+				margin: auto;
+				padding: 1em;
 			}
 			h1 {
 				text-align: center;
+				margin: auto;
 			}
 			h2 {
 				text-align: center;
@@ -24,14 +26,23 @@
 			img {
 				width: 100%;
 			}
-			#content {
+			.content {
 				display: none;
 			}
 			.pesterLog {
-				margin: auto;
+				margin: 1em;
 				outline: 0.05em;
 				outline-style: dashed;
 				padding: 1em;
+			}
+			.buttonContainer {
+				position: absolute;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+			.visible {
+				display: block;
 			}
 		</style>
 	</head>
@@ -41,15 +52,15 @@
 				<h1>I hate this</h1>
 				<img src="https://cdn.discordapp.com/attachments/737828094873698334/775911131226832916/sigh.gif">
 				<div class="pesterLog">
-					<button onclick="openContent()">Gaze upon this wretched thing</button>
-					<p id="content">This was actually WAY too fucking easy. HS is like bare fucking bones actually.<br>It doesn't close and the button isn't centered tho cause i don't care that much</p>
+					<button class="buttonContainer" onclick="toggleContent()">Gaze upon this wretched thing</button>
+					<p class="content">This was actually WAY too fucking easy. HS is like bare fucking bones actually.<br>I went back and fixed those problems, which makes this whole thing about 40 minutes of my time.</p>
 				</div>
 				<h2>> <a href="https://crouton.net/">Anyways, post crouton</a></h2>
 			</div>
 		</div>
 		<script>
-			function openContent() {
-				document.getElementById("content").style.display = "block";
+			function toggleContent() {
+				document.getElementsByClassName("content").item(0).classList.toggle("visible");
 			}
 		</script>
 	</body>
