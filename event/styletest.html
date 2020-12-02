@@ -2,10 +2,23 @@
 <html>
 	<head>
 		<title>
-
+			In Choro Lunae
 		</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+			@font-face {
+				font-family: 'black arcade';
+				src: url(../fonts/Black\ Arcade\ Free.otf);
+			}
+			@font-face {
+				font-family: 'fancy pants';
+				src: url(../fonts/FancyPantsNF.otf);
+			}
+			html {
+				scroll-behavior: smooth;
+				font-family: 'nunito';
+			}
 			body {
 				background-color: black;
 				color: white;
@@ -13,8 +26,9 @@
 			.contentBox {
 				border: white;
 				border-style: double;
-				margin: 2em;
-				padding: 1em;
+				border-width: 0.5em;
+				margin: auto;
+				width: 75%;
 			}
 			.row {
 				position: relative;
@@ -22,11 +36,40 @@
 			.column {
 				float: left;
 			}
+			h1 {
+				text-align: center;
+				font-family: "fancy pants";
+			}
+			h2 {
+				text-align: center;
+
+			}
+			table, th, td {
+				border: 0.1em solid white;
+				margin: auto;
+				width: 75%;
+				margin-bottom: 1em;
+			}
+			th {
+				padding: 0.5em;
+			}
+			td {
+				padding: 0.5em;
+			}
 		</style>
 	</head>
 	<body>
-		<h1>Title</h1>
-		
+		<h1>In Choro Lunae</h1>
+		<div class="contentBox">
+			<h2><u>Introduction</u></h2>
+			<table>
+				<tr>
+				  <th>Title</th>
+				</tr>
+				<tr>
+				  <td>Inside</td>
+				</tr>
+			  </table>
 		</div>
 	</body>
 </html>
