@@ -1,0 +1,97 @@
+
+			@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+			@font-face {
+				font-family: 'black arcade';
+				src: url(../../fonts/Black\ Arcade\ Free.otf);
+			}
+			@font-face {
+				font-family: 'fancy pants';
+				src: url(../../fonts/FancyPantsNF.otf);
+			}
+			html {
+				scroll-behavior: smooth;
+				font-family: 'nunito';
+				background-color: black;
+				color: white;
+			}
+			.contentBox {
+				border: white;
+				border-style: double;
+				border-width: 0.5em;
+				margin: 1em auto;
+				width: 75%;
+				padding: 1em;
+			}
+			.row {
+				position: relative;
+			}
+			.column {
+				float: left;
+				width: 50%;
+			}
+			h1 {
+				text-align: center;
+				font-family: "fancy pants";
+			}
+			h2 {
+				text-align: center;
+				margin: 0;
+			}
+			table, th, td {
+				border: 0.1em solid white;
+				margin: auto;
+				width: 75%;
+				margin-bottom: 1em;
+			}
+			th {
+				padding: 0.5em;
+			}
+			td {
+				padding: 0.5em;
+			}
+			.trigger {
+				display: none;
+				position: fixed;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgb(0,0,0);
+				background-color: rgba(0,0,0,0.4);
+			  }
+			.trigger-content {
+				background-color: black;
+				margin: 15% auto;
+				border: 0.25em solid white;
+				width: 80%;
+				color: white;
+				padding: 1em;
+			}
+			p {
+				margin: 1em;
+			}
+			.subtitle {
+				position: relative;
+				bottom: 1em;
+				text-align: center;
+			}
+			.secret {
+				position: relative;
+				border: 1em;
+				text-align: center;
+				background: none;
+				font-family: 'Nunito', sans-serif;
+				color: white;
+			}
+			button {
+				color: white;
+				background-color: black;
+				border: 0.2em solid white;
+			}
+			.testText {
+				font-weight: bold;
+				text-align: end;
+				font-size: 2em;
+			}
