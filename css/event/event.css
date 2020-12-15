@@ -44,8 +44,9 @@
 			table, th, td {
 				border: 0.1em solid white;
 				margin: auto;
-				width: 75%;
+				width: 90%;
 				margin-bottom: 1em;
+				font-size: 0.8em;
 			}
 			th {
 				padding: 0.5em;
@@ -54,7 +55,7 @@
 				padding: 0.5em;
 			}
 			.trigger {
-				display: inline;
+				display: none;
 				position: fixed;
 				z-index: 1;
 				left: 0;
@@ -90,9 +91,13 @@
 				color: white;
 			}
 			button {
-				color: white;
+				color: black;
 				background-color: black;
-				border: 0.2em solid white;
+				border: 0.2em solid black;
+				display: none;
+			}
+			.secretButton {
+				float: right;
 			}
 			.testText {
 				font-weight: bold;
