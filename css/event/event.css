@@ -37,6 +37,10 @@
 				text-align: center;
 				margin: 0;
 			}
+			h3 {
+				text-align: center;
+				margin: 0;
+			}
 			table, th, td {
 				border: 0.1em solid white;
 				margin: auto;
@@ -50,7 +54,7 @@
 				padding: 0.5em;
 			}
 			.trigger {
-				display: none;
+				display: inline;
 				position: fixed;
 				z-index: 1;
 				left: 0;
@@ -70,7 +74,6 @@
 				padding: 1em;
 			}
 			p {
-				margin: 1em;
 			}
 			.subtitle {
 				position: relative;
