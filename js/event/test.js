@@ -15,10 +15,8 @@ function checkTrigger() {
 		c = c.substring(1);
 	  }
 	  if (c.indexOf(agreed) == 0) {
-		  console.log("Cookie Found");
 		  break
 	  } else {
-		console.log("Cookie Not Found");
 		trigger.style.display = "block";
 		break;
 	  }
@@ -29,7 +27,7 @@ agree.onclick = function(event) {
 		trigger.style.display = "none";
 		if (agreeBox.checked == true) {
 			var d = new Date();
-			d.setTime(d.getTime() + (14*24*60*60*1000));
+			d.setTime(d.getTime() + (62*24*60*60*1000));
 			var expires = "expires="+ d.toUTCString();
 			document.cookie = "agreed=true;" + expires + ";path=/";
 			console.log(document.cookie);
@@ -48,11 +46,13 @@ secretButton.onclick = function() {
 		lukas.style.display = "block";
 		window.location.href = "#lukas";
 	}
+	secret.value = "";
 }
 
 secret.addEventListener("keyup", function(event) {
 	if (event.keyCode === 13) {
 	  event.preventDefault();
 	  secretButton.click();
+	  secret.value = "";
 	}
   });
