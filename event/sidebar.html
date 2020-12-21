@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<Head>
+		<link rel="stylesheet" href="..\css\event\event.css">
+		<title>
+			Sidebar Test
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+<style>
+	.item1 {
+	}
+	
+	.grid-container {
+	  display: grid;
+	  grid:
+	  '. .';
+	}
+	
+	.grid-container > div {
+	  text-align: center;
+	  font-size: 30px;
+	}
+	.left {
+	  background-color: rgba(136, 136, 136, 0.253);
+	}
+	</style>
+	</head>
+	<body>
+	
+	<h1>The grid Property</h1>
+	
+	<p>The grid property can also specify rows/columns using named grid items</p>
+	<p>To specify two rows, make one more sequence </p>
+	<p>Each row is defined by apostrophes (' ').</p>
+	<p>"myArea" will span the first two columns, in the first two rows:</p>
+	
+	<div class="grid-container">
+	  <div class="left">1</div>
+	  <div class="right">2</div>
+	</div>
+	
+	</body>
+</html>
