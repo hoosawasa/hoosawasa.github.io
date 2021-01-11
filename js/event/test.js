@@ -2,7 +2,9 @@ var trigger = document.getElementsByClassName("trigger")[0];
 var agree = document.getElementById("agree");
 var secret = document.getElementById("secret");
 var secretButton = document.getElementById("secretButton");
-var lukas = document.getElementById("lukas");
+var attomy = document.getElementById("attomy");
+var madness = document.getElementById("madness");
+var lost = document.getElementById("lost");
 var agreeBox = document.getElementById("agreeBox");
 
 function checkTrigger() {
@@ -43,8 +45,12 @@ secret.onfocus = function() {
 
 secretButton.onclick = function() {
 	if(secret.value == "Lukas") {
-		lukas.style.display = "block";
-		window.location.href = "#lukas";
+		attomy.style.display = "block";
+		window.location.href = "#attomy";
+	} else if(secret.value == "Cacophony") {
+		madness.style.display = "block";
+		lost.style.display = "block";
+		window.location.href = "#madness";
 	}
 	secret.value = "";
 }

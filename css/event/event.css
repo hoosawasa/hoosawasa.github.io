@@ -51,9 +51,12 @@
 			}
 			th {
 				padding: 0.5em;
+				font-size: 1.25em;
+				font-weight: bold;
 			}
 			td {
 				padding: 0.5em;
+				line-height: 1.25em;
 			}
 			.trigger {
 				display: none;
