@@ -36,13 +36,6 @@ agree.onclick = function(event) {
 		}
 }
 
-secret.onfocus = function() {
-	secretButton.style.display = "inline";
-	secretButton.style.color = "white";
-	secretButton.style.border = "0.2em solid white";
-	secret.style.outline = "0.2em solid white";
-}
-
 secretButton.onclick = function() {
 	if(secret.value == "Lukas") {
 		attomy.style.display = "block";

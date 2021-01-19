@@ -94,17 +94,23 @@
 				font-family: 'Nunito', sans-serif;
 				color: white;
 			}
+			#secret {
+				outline: 0.2em solid white;
+			}
 			button {
 				background-color: black;
-				border: 0.2em solid black;
+				border: 0.2em solid white;
+				color: white;
 			}
 			.secretButton {
-				display: none;
+				display: inline;
 				float: right;
+				color: white;
+				border: 0.2em solid white;
 			}
 			.grid-container {
 			  display: grid;
-			  grid-template-columns: auto auto auto;
+			  grid-template-columns: auto auto;
 			  padding: 10px;
 			}
 			.centered-image {
