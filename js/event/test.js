@@ -37,10 +37,7 @@ agree.onclick = function(event) {
 }
 
 secretButton.onclick = function() {
-	if(secret.value == "Lukas") {
-		attomy.style.display = "block";
-		window.location.href = "#attomy";
-	} else if(secret.value == "Cacophony") {
+	if(secret.value == "Cacophony") {
 		madness.style.display = "block";
 		lost.style.display = "block";
 		window.location.href = "#madness";
