@@ -5,6 +5,7 @@ var secretButton = document.getElementById("secretButton");
 var attomy = document.getElementById("attomy");
 var madness = document.getElementById("madness");
 var lost = document.getElementById("lost");
+var mazes = document.getElementById("mazes");
 var agreeBox = document.getElementById("agreeBox");
 
 function checkTrigger() {
@@ -39,8 +40,14 @@ agree.onclick = function(event) {
 secretButton.onclick = function() {
 	if(secret.value == "Cacophony") {
 		madness.style.display = "block";
+		mazes.style.display = "block";
 		lost.style.display = "block";
 		window.location.href = "#madness";
+	} else if(secret.value == "Twisted") {
+		madness.style.display = "block";
+		mazes.style.display = "block";
+		lost.style.display = "block";
+		window.location.href = "#mazes";
 	}
 	secret.value = "";
 }
